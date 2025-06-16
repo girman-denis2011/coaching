@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Start Coaching</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div style="height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <button id="start-btn">
+      <img id="ball" src="Ball.png" alt="Basketball" />
+      Start Coaching
+    </button>
+    <div class="dust">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <script>
+    const button = document.getElementById('start-btn');
+    button.addEventListener('click', () => {
+      button.classList.add('zoom-in');
+      setTimeout(() => {
+        window.location.href = "court.html";
+      }, 500);
+    });
+  </script>
+</body>
+</html>

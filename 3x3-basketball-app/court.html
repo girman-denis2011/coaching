@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3x3 Court</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: #444;
+      font-family: sans-serif;
+    }
+    #court {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  background: url('/3x3\ Court.png') no-repeat center center;
+  background-size: cover;
+}
+
+
+
+    
+    .player, #draggable-ball {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      transition: left 0.05s linear, top 0.05s linear;
+    }
+    .player {
+      background-color: #68869e;
+    }
+    #draggable-ball {
+      width: 40px;
+      height: 40px;
+      background: url('ball.png') center/contain no-repeat;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="court">
+    <div class="player" id="pg" style="top: 60%; left: 20%;">PG</div>
+    <div class="player" id="shooter" style="top: 60%; left: 50%;">SH</div>
+    <div class="player" id="c" style="top: 60%; left: 80%;">C</div>
+
+    <div id="draggable-ball" style="top: 50%; left: 50%;"></div>
+  </div>
+</body>
+</html>
